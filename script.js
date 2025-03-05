@@ -3,10 +3,10 @@ console.log(`Connected Yah,Yah,Yah`);
 // ----------------------------- Background Slide -------------------------- //
 
 const images = [
-  "/mission-02/images/background1.jpg",
-  "/mission-02/images/background2.jpg",
-  "/mission-02/images/background3.jpg",
-  "/mission-02/images/background4.jpg",
+  "/images/background1.jpg",
+  "/images/background2.jpg",
+  "/images/background3.jpg",
+  "/images/background4.jpg",
 ];
 
 let currentIndex = 0;
