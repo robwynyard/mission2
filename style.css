@@ -1,0 +1,412 @@
+* {
+  font-family: Zain;
+  font-size: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ---------------------------- Container & Content-Box Styling ------------------------------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  margin: 0;
+  text-align: center;
+}
+
+.content-box {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 90vw;
+  padding: 10px;
+  margin: 40px 0;
+  text-align: center;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* --------------------------- Background -------------------------------- */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  transition: opacity 1.5s ease-in-out;
+  background-image: url(/mission-02/images/background1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1.5s ease-in-out;
+  z-index: -1;
+}
+
+#bg1 {
+  opacity: 1;
+}
+
+#bg2 {
+  opacity: 0;
+}
+
+/* --------------------------------- Home Content ---------------------- */
+
+#home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+#home-content h3 {
+  font-weight: 15;
+  font-size: 45px;
+  margin-bottom: 0px;
+}
+
+#home-content h1 {
+  font-size: 65px;
+  margin-top: 1px;
+  margin-bottom: 15px;
+  font-weight: 20px;
+}
+
+#home-content button {
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  width: 175px;
+  cursor: pointer;
+}
+
+/* ------------------------------ About Me Section ------------------------- */
+
+#about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+/* Left Side (Image) */
+#left {
+  width: 40%;
+}
+
+#left img {
+  width: 90%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Right Side (Text) */
+#right {
+  width: 55%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading Section */
+
+#about-me-heading {
+  text-align: left;
+  margin-bottom: 20px;
+  width: 92%;
+}
+
+#about-me-heading h1 {
+  font-size: 37px;
+  font-style: italic;
+}
+
+#about-me-heading p {
+  font-size: 20px;
+}
+
+#about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Left Column: About Me */
+#about-me-left {
+  width: 50%;
+}
+
+/* Right Column: My Equipment */
+#my-travel-right {
+  width: 50%;
+}
+
+#my-travel-right ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+#my-travel-right h2 {
+  margin-bottom: 10px;
+}
+
+/* ----------------------------------- Gallery Section ------------------------- */
+
+#gallery-heading {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.gallery {
+  display: grid;
+  gap: 60px;
+  padding: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.xwide {
+  grid-column: span 3;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.tall {
+  grid-row: span 2;
+}
+/* -------------------------- Magnifying Icon -------------------------  */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Magnifying glass icon */
+.gallery-item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover::before,
+.gallery-item:hover i {
+  opacity: 1;
+}
+
+/* ---------------------- Gallery Modal Popup ------------------------  */
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Image */
+.modal-content {
+  max-height: 90vh;
+  max-width: 90vw;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Position the arrows */
+.modal-content-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+/* Optional: Hover effect for arrows */
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ------------------------------ Contact Form ----------------------- */
+
+#contact-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 80vw; */
+  padding: 40px;
+  border-radius: 8px;
+}
+
+fieldset h1 {
+  margin-top: 0;
+  font-size: 35px;
+  text-align: left;
+}
+
+#contact-right {
+  width: 25%;
+  text-align: left;
+  padding: 0px;
+  margin: 0;
+}
+
+#contact-left {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+#contact-left form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form Fields */
+.contact-box {
+  width: 100%;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-box textarea {
+  height: 120px;
+  resize: none;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.input-row input {
+  width: 50%;
+}
+
+.contact-box textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+}
+
+#submit-button {
+  border: 1px solid;
+  width: 15%;
+  background-color: black;
+  align-items: left;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+}

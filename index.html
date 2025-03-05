@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rob Wynyard: The Portfolio</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- -------------------------------------Background Transition -------------- -->
+    <div id="bg1" class="background"></div>
+    <div id="bg2" class="background"></div>
+
+    <!-- --------------------- Nav Bar ----------------------------- -->
+    <header id="site-header">
+      <nav id="main-nav" class="navbar">
+        <a href="#home-content">Home</a>
+        <a href="#about-me">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact-form">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- --------------------- Home Content ----------------------------- -->
+      <div id="home-content">
+        <h3>World & Landscape Photographer</h3>
+        <h1>Rob Wynyard</h1>
+        <a href="#gallery" id="view-work-btn">
+          <button>View My Work</button>
+        </a>
+      </div>
+      <!-- --------------------- About Me ----------------------------- -->
+      <div class="content-box" id="about-me">
+        <!-- Left Section: Profile Image -->
+        <section id="left">
+          <img
+            src="/mission-02/images/us.jpg"
+            alt="Photographer taking a picture"
+          />
+        </section>
+
+        <!-- Right Section: About Me Text -->
+        <section id="right">
+          <!-- Heading (Sits Above the Two Columns) -->
+          <section id="about-me-heading">
+            <h1>Life is an adventure. Capture every minute.</h1>
+            <p>
+              I'm Rob, a bloke from Papamoa, New Zealand, who loves to travel
+              the world and capture a few not very good photos while doing it.
+            </p>
+          </section>
+
+          <!-- Two-Column Layout -->
+          <div id="about-content">
+            <!-- Left Column: A Little About Me -->
+            <section id="about-me-left">
+              <h2>A Little About Me</h2>
+              <br />
+              <p>
+                I was born and raised in Tauranga, New Zealand. Im married to
+                Sophie and we have a baby girl called Poppy. We love spending
+                time at the beach, eating great food & traveling the world.
+              </p>
+            </section>
+
+            <!-- Right Column: My Equipment -->
+            <section id="my-travel-right">
+              <h2>Some Of My Favorite Holidays</h2>
+              <ul>
+                <li>Europe. 2014</li>
+                <li>Samoa, 2015</li>
+                <li>Thailand, 2017 & 2024</li>
+                <li>Bali, 2018 & 2019</li>
+                <li>Europe, 2019</li>
+                <li>Rarotonga, 2021</li>
+                <li>Australia, 2022, 2023 & 2024</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <!-- --------------------- Gallery ----------------------------- -->
+
+      <div class="content-box" id="gallery">
+        <h1 id="gallery-heading">Gallery</h1>
+        <p>
+          These are some of my favorite snaps from across various holidays we
+          have done over the years
+        </p>
+
+        <div id="imageModal" class="modal">
+          <span class="close">&times;</span>
+          <div class="modal-content-wrapper">
+            <!-- Left Arrow -->
+            <span id="prevArrow" class="arrow left">&lt;</span>
+
+            <!-- Image in Modal -->
+            <img class="modal-content" id="modalImage" />
+
+            <!-- Right Arrow -->
+            <span id="nextArrow" class="arrow right">&gt;</span>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="/mission-02/images/kohphipi.jpeg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item">
+            <img src="/mission-02/images/omanuhouse.jpeg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item">
+            <img src="/mission-02/images/paros.JPG" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item xwide">
+            <img src="/mission-02/images/ricericebali.jpeg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item">
+            <img src="/mission-02/images/barcelona.jpg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item">
+            <img src="/mission-02/images/papamoabeach.jpg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item tall">
+            <img src="/mission-02/images/goldcoast.jpeg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item">
+            <img src="/mission-02/images/phuket.JPG" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item">
+            <img src="/mission-02/images/mountmaun.jpeg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item">
+            <img src="/mission-02/images/capri_steps.jpeg" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="gallery-item wide">
+            <img src="/mission-02/images/capri.JPG" />
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------- Contact ----------------------------- -->
+      <div class="content-box" id="contact-form">
+        <section id="contact-left">
+          <form action="mailto:robertwy@missionreadyhq.com" method="post">
+            <fieldset class="contact-box">
+              <h1>Get In Touch!</h1>
+
+              <!-- First Name & Last Name Row -->
+              <div class="input-row">
+                <input
+                  type="text"
+                  name="firstName"
+                  required
+                  placeholder="First Name*"
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  required
+                  placeholder="Last Name*"
+                />
+              </div>
+
+              <br />
+
+              <!-- Email & Subject Row -->
+              <div class="input-row">
+                <input
+                  type="email"
+                  name="emailAdd"
+                  required
+                  placeholder="Email*"
+                />
+                <input
+                  type="text"
+                  name="subjectBox"
+                  required
+                  placeholder="Select a Subject"
+                />
+              </div>
+
+              <br />
+
+              <textarea name="message" placeholder="Message*"></textarea
+              ><br /><br />
+
+              <input id="submit-button" type="submit" value="Submit" />
+            </fieldset>
+          </form>
+        </section>
+
+        <section id="contact-right">
+          <h1>Location</h1>
+          <p>22 Nostreet, Papamoa, NZ</p>
+          <h1>Phone</h1>
+          <p>+64271234567</p>
+          <h1>Email</h1>
+          <p>photo@robwynyard.com</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
